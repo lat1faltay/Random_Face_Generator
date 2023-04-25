@@ -63,7 +63,12 @@ public class RandomFaceGenerator {
         }
     };
     frame.add(p);
-    
+    frame.addMouseListener(new MouseAdapter() {
+        @Override
+        public void mouseClicked(MouseEvent e) {
+        frame.repaint();
+        }
+    });
     frame.setVisible(true);
     }
     
